@@ -1,24 +1,17 @@
-const books = [
-  {
-    id: 1,
-    title: 'First Book',
-    author: 'Ugochukwu Omeje',
-  },
-  {
-    id: 2,
-    title: 'Second Book',
-    author: 'Amr Ahmed',
-  },
-];
+/* eslint-disable comma-dangle */
+/* eslint-disable prefer-const */
+const booksLocalStorage = JSON.parse(localStorage.getItem('books') || '[]');
+let books = booksLocalStorage;
 const booksContainer = document.querySelector('.books-container');
 
 function displayBooks() {
-  if (booksContainer.querySelectorAll('div'))
+  if (booksContainer.querySelectorAll('div')) {
     Array.from(booksContainer.querySelectorAll('div')).forEach(
       (bookContainer) => {
         booksContainer.removeChild(bookContainer);
       }
     );
+  }
 
   books.forEach((book) => {
     const bookContainer = document.createElement('div');
@@ -41,6 +34,5 @@ function displayBooks() {
 }
 
 // call the function on load for first time
-displayBooks();
-console.log(Array.from(booksContainer.querySelectorAll('div')));
-console.log(booksContainer.querySelectorAll('div'));
+
+if (books.length) displayBooks();
