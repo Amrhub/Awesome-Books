@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable comma-dangle */
 /* eslint-disable prefer-const */
+/* eslint-disable no-undef */
 const booksContainer = document.querySelector('.books-container');
 
 function displayBooks() {

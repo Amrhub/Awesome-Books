@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable no-use-before-define */
 /* eslint-disable object-shorthand */
 /* eslint-disable no-undef */
@@ -27,7 +28,7 @@ class allBooks {
   }
 }
 
-form.onsubmit = (e) => {
+form.onsubmit = () => {
   const title = form.elements.title.value;
   const author = form.elements.author.value;
   if (allBooks.books.length) {
