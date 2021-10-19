@@ -34,7 +34,7 @@ form.onsubmit = () => {
   if (allBooks.books.length) {
     const bookId = allBooks.books[allBooks.books.length - 1].id + 1;
     allBooks.addBook(title, author, bookId);
-  } else addBook(title, author, 1);
+  } else allBooks.addBook(title, author, 1);
   localStorage.setItem('books', JSON.stringify(allBooks.books));
   removeBtns = Array.from(booksContainer.querySelectorAll('button'));
 };
