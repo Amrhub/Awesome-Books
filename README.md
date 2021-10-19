@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-This project allows you to add/remove books 
+This project allows you to add/remove books
 
 ## Built With
 
@@ -14,7 +14,7 @@ This project allows you to add/remove books
 
 ## Live Demo
 
-[Portfolio Web Page](https://amrhub.github.io/myPortfolio/)
+[Awesome books Web Page](https://amrhub.github.io/Awesome-Books/)
 
 ## Getting Started
 
