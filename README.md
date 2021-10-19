@@ -35,6 +35,11 @@ To run the project open folder (after extraction) then run index.html
 
 - GitHub: [@Amrhub](https://github.com/Amrhub/)
 - LinkedIn: [Amr Ahmed](https://www.linkedin.com/in/amr-ahmed-655420191/)
+- 
+👤 **Omeje Ugochukwu**
+
+- GitHub: [@ugochukwu]https://github.com/ugochukwuomeje)
+- LinkedIn: [Omeje Ugochukwu](https://www.linkedin.com/in/ugochukwu-omejev/)
 
 ## 🤝 Contributing
 
