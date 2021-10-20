@@ -7,21 +7,22 @@
     <title>Awesome Books</title>
     <script defer src="scripts/domManipulation.js"></script>
     <script defer src="scripts/index.js"></script>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <h1>All awesome books</h1>
     <main class="books-container">
     </main>
 
-    <form id="add-book" method="get">
-        <label for="title" hidden>Book Title</label>
-        <input type="text" name="title" id="title" placeholder="Title" required>
-        <br>
-        <br>
-        <label for="author" hidden>Book Author</label>
-        <input type="text" name="author" id="author" placeholder="Author" required>
-        <br>
-        <br>
-        <button type="submit">Add</button>
-    </form>
+    <section class="add-book-wrapper">
+        <h2>Add a new book</h2>
+        <form id="add-book" method="get">
+            <label for="title" hidden>Book Title</label>
+            <input type="text" name="title" id="title" placeholder="Title" required>
+            <label for="author" hidden>Book Author</label>
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <button type="submit">Add</button>
+        </form>
+    </section>
 </body>
 </html>
