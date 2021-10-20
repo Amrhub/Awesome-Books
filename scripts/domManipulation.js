@@ -18,9 +18,8 @@ function displayBooks() {
     const bookTitle = document.createElement('p');
     const bookAuthor = document.createElement('p');
     const removeBookBtn = document.createElement('button');
-    const hr = document.createElement('hr');
 
-    bookTitle.textContent = book.title;
+    bookTitle.textContent = `"${book.title}" by `;
     bookAuthor.textContent = book.author;
     removeBookBtn.textContent = 'Remove';
     removeBookBtn.id = `${book.id}`;
@@ -28,7 +27,6 @@ function displayBooks() {
     bookContainer.appendChild(bookTitle);
     bookContainer.appendChild(bookAuthor);
     bookContainer.appendChild(removeBookBtn);
-    bookContainer.appendChild(hr);
     booksContainer.appendChild(bookContainer);
   });
 }

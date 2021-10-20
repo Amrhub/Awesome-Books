@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+  color: #012138;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  box-shadow: 1px 1px 1px #012138;
+  cursor: pointer;
+}
+
+.books-container {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid black;
+
+  & > * {
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 0 5%;
+    align-items: center;
+
+    button {
+      height: 30px;
+      margin-left: auto;
+    }
+
+    &:first-of-type,
+    &:nth-of-type(2n + 1) {
+      background-color: whitesmoke;
+    }
+  }
+}
+
+.add-book-wrapper {
+  max-width: 300px;
+  width: 100%;
+  margin: 4rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    button {
+      align-self: flex-end;
+      width: 60px;
+    }
+  }
+}
