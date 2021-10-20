@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable comma-dangle */
 /* eslint-disable prefer-const */
-const booksLocalStorage = JSON.parse(localStorage.getItem('books') || '[]');
-let books = booksLocalStorage;
+/* eslint-disable no-undef */
 const booksContainer = document.querySelector('.books-container');
 
 function displayBooks() {
@@ -13,7 +13,7 @@ function displayBooks() {
     );
   }
 
-  books.forEach((book) => {
+  allBooks.books.forEach((book) => {
     const bookContainer = document.createElement('div');
     const bookTitle = document.createElement('p');
     const bookAuthor = document.createElement('p');
@@ -32,7 +32,3 @@ function displayBooks() {
     booksContainer.appendChild(bookContainer);
   });
 }
-
-// call the function on load for first time
-
-if (books.length) displayBooks();
