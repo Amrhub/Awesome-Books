@@ -4,6 +4,15 @@
 /* eslint-disable no-undef */
 const booksContainer = document.querySelector('.books-container');
 const noBook = booksContainer.querySelector('span');
+const currentDate = document.querySelector('.date');
+const dateFormat = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+};
 
 function displayBooks() {
   if (booksContainer.querySelectorAll('div').length) {
@@ -13,6 +22,7 @@ function displayBooks() {
       }
     );
   }
+  currentDate.textContent = luxon.DateTime.local().toLocaleString(dateFormat);
 
   if (allBooks.books.length === 0) {
     noBook.style.display = 'flex';
