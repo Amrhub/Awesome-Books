@@ -3,15 +3,20 @@
 /* eslint-disable prefer-const */
 /* eslint-disable no-undef */
 const booksContainer = document.querySelector('.books-container');
+const noBook = booksContainer.querySelector('span');
 
 function displayBooks() {
-  if (booksContainer.querySelectorAll('div')) {
+  if (booksContainer.querySelectorAll('div').length) {
     Array.from(booksContainer.querySelectorAll('div')).forEach(
       (bookContainer) => {
         booksContainer.removeChild(bookContainer);
       }
     );
   }
+
+  if (allBooks.books.length === 0) {
+    noBook.style.display = 'flex';
+  } else noBook.style.display = 'none';
 
   allBooks.books.forEach((book) => {
     const bookContainer = document.createElement('div');

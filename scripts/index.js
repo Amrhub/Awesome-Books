@@ -43,12 +43,14 @@ function assignRemoveEventListener() {
   if (allBooks.books.length > 0) {
     removeBtns = Array.from(booksContainer.querySelectorAll('button'));
     removeBtns.forEach((removeBtn) => {
-      removeBtn.onclick = (e) => allBooks.removeBook(e.path[0]);
+      removeBtn.onclick = (e) => {
+        allBooks.removeBook(e.target);
+      };
     });
   }
 }
 
 // call the functions on load for first time
 
-if (allBooks.books.length) displayBooks();
+displayBooks();
 assignRemoveEventListener();

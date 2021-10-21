@@ -22,6 +22,16 @@ button {
   border: 1px solid black;
 }
 
+.books-container span {
+  display: none;
+  color: red;
+  padding: 1rem;
+}
+
+.books-container span img {
+  width: 40px;
+}
+
 .books-container > * {
   box-sizing: border-box;
   margin: 0 auto;
