@@ -21,6 +21,16 @@ button {
   max-width: 500px;
   border: 1px solid black;
 
+  span {
+    display: none;
+    color: red;
+    padding: 1rem;
+
+    img {
+      width: 40px;
+    }
+  }
+
   & > * {
     box-sizing: border-box;
     margin: 0 auto;
