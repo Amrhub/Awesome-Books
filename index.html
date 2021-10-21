@@ -5,18 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Books</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script defer src="https://moment.github.io/luxon/global/luxon.js"></script>
     <script defer src="scripts/domManipulation.js"></script>
     <script defer src="scripts/index.js"></script>
-    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>All awesome books</h1>
-    <main class="books-container">
-        <span>There is no book stored to display <img src="images/no-book.png" alt="no book logo"></span>
-    </main>
+    <nav class="navbar">
+        <a href="#">Awesome Books</a>
+        <a href="#" class="active-link">List</a>
+        <a href="#">Add new</a>
+        <a href="#">Contact</a>
+    </nav>
+    <span class="date"></span>
+
+    <section class="books-list">
+        <h1>All awesome books</h1>
+        <div class="books-container">
+            <span>There is no book stored to display <img src="images/no-book.png" alt="no book logo"></span>
+        </div>
+    </section>
 
     <section class="add-book-wrapper">
-        <h2>Add a new book</h2>
+        <h1>Add a new book</h1>
         <form id="add-book" method="get">
             <label for="title" hidden>Book Title</label>
             <input type="text" name="title" id="title" placeholder="Title" required>
@@ -25,5 +36,19 @@
             <button type="submit">Add</button>
         </form>
     </section>
+
+    <section class="contact-us">
+        <h1 class="contact-us__header">
+            Contact information
+        </h1>
+        <p>Do you have any question or just want to say "Hello"? <br> You can reach out to us!</p>
+        <ul>
+            <li>Our email amr_ahmed65@hotmail.com</li>
+            <li>Our phone number: 01000289783</li>
+            <li>Our address: Street 22, 84503 Cairo, Egypt</li>
+        </ul>
+    </section>
+
+    <footer><span class="footer">Copyright 	&copy;  Amr Ahmed</span></footer>
 </body>
 </html>

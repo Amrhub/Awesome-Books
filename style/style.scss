@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+$primary-color: #012138;
+$light-color: #d9d9d9;
+
 * {
   font-family: 'Lato', sans-serif;
-  color: #012138;
+  color: $primary-color;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 body {
@@ -12,18 +21,72 @@ body {
 }
 
 button {
-  box-shadow: 1px 1px 1px #012138;
+  box-shadow: 1px 1px 1px $primary-color;
   cursor: pointer;
+}
+
+header {
+  width: 100%;
+}
+
+.contact-us,
+.add-book-wrapper,
+.books-list {
+  min-height: 80vh;
+}
+
+.contact-us,
+.add-book-wrapper {
+  display: none;
+}
+
+.active-link {
+  color: white !important;
+  font-weight: bolder;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: $primary-color;
+  padding: 1rem 0;
+
+  a {
+    margin: 0 1rem;
+    border-right: $light-color 1px solid;
+    padding-right: 1rem;
+    color: $light-color;
+    text-decoration: none;
+
+    &:nth-of-type(2) {
+      margin-left: auto;
+    }
+
+    &:nth-child(4),
+    &:nth-child(1) {
+      border: none;
+    }
+  }
+}
+
+.date {
+  align-self: end;
+  margin: 0.5rem 2rem 0;
+}
+
+.books-list {
+  width: 100%;
+  max-width: 500px;
 }
 
 .books-container {
   width: 100%;
-  max-width: 500px;
   border: 1px solid black;
+  border-radius: 4px;
 
   span {
     display: none;
-    color: red;
+    color: #940505;
     padding: 1rem;
 
     img {
@@ -37,8 +100,18 @@ button {
     display: flex;
     width: 100%;
     gap: 10px;
-    padding: 0 5%;
+    padding: 10px 5%;
     align-items: center;
+
+    &:first-of-type {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+
+    &:last-of-type {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
 
     button {
       height: 30px;
@@ -57,18 +130,54 @@ button {
   width: 100%;
   margin: 4rem;
 
-  h2 {
-    text-align: center;
-  }
-
   form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
+    input {
+      border-radius: 20px;
+      padding: 8px 8px 8px 16px;
+      border: none;
+      background-color: $light-color;
+      color: $primary-color;
+
+      &::placeholder {
+        color: $primary-color;
+      }
+
+      &:active,
+      &:focus {
+        outline: 2px $primary-color solid;
+      }
+    }
+
     button {
       align-self: flex-end;
       width: 60px;
+      border-radius: 10px;
+      border: none;
     }
+  }
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+footer {
+  width: 100%;
+  background-color: $primary-color;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+
+  .footer {
+    display: block;
+    width: 100%;
+    color: $light-color;
+    text-align: center;
   }
 }
