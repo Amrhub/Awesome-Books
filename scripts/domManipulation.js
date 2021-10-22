@@ -14,6 +14,10 @@ const dateFormat = {
   second: 'numeric',
 };
 
+setInterval(() => {
+  currentDate.textContent = luxon.DateTime.local().toLocaleString(dateFormat);
+}, 100);
+
 function displayBooks() {
   if (booksContainer.querySelectorAll('div').length) {
     Array.from(booksContainer.querySelectorAll('div')).forEach(
@@ -22,7 +26,6 @@ function displayBooks() {
       }
     );
   }
-  currentDate.textContent = luxon.DateTime.local().toLocaleString(dateFormat);
 
   if (allBooks.books.length === 0) {
     noBook.style.display = 'flex';
